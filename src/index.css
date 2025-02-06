@@ -1,0 +1,21 @@
+:root {
+  --font-family-primary: 'Montserrat';
+  --font-family-secondary: 'Fira Sans';
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  --font-size-s: 12px;
+  --font-size-m: 14px;
+  --font-size-l: 16px;
+  --font-size-xl: 20px;
+  --font-size-2xl: 25px;
+  --font-size-3xl: 30px;
+
+  --color-primary: #656ec2;
+  --color-dark: #282626;
+  --color-gray: #767676;
+  --color-status-dead: #820A0A;
+  --color-status-alive: #267504;
+  --color-light: #fff;
+}
+
