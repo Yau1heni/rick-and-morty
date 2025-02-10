@@ -1,13 +1,13 @@
 :root {
-  --font-family-primary: 'Montserrat';
-  --font-family-secondary: 'Fira Sans';
+  --font-family-primary: 'Fira Sans';
+  --font-family-secondary: 'Montserrat';
   --font-weight-regular: 400;
   --font-weight-bold: 700;
 
   --font-size-s: 12px;
   --font-size-m: 14px;
   --font-size-l: 16px;
-  --font-size-xl: 20px;
+  --font-size-xl: 22px;
   --font-size-2xl: 25px;
   --font-size-3xl: 30px;
 

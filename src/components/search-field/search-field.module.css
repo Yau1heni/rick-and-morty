@@ -1,0 +1,47 @@
+.searchField {
+  position: relative;
+  width: 626px;
+  margin: 0 auto 100px;
+}
+
+.input {
+  box-shadow: 0 7px 12px 0 rgba(100, 100, 111, 0.2);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-xl);
+  color: var(--color-primary);
+  padding: 19px 25px;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+.input::placeholder {
+  color: var(--color-primary);
+}
+
+.bottomSignature {
+  position: absolute;
+  font-family: var(--font-family-secondary), sans-serif;
+  font-weight: var(--font-weight-regular);
+  left: 6%;
+  top: calc(100% + 14px);
+}
+
+@media (max-width: 768px) {
+  .searchField {
+    width: calc(100vw - 25%);
+  }
+}
+
+@media (max-width: 480px) {
+  .searchField {
+    width: 100%;
+    margin-bottom: 48px;
+  }
+
+  .bottomSignature {
+    font-size: var(--font-size-m);
+  }
+}
+
