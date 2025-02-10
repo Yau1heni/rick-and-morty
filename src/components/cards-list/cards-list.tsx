@@ -23,8 +23,8 @@ export const CardsList: FC<CardsListProps> = (props) => {
 
   return (
     <div className={styles.cardsList}>
-      {cards?.map(({id, name, status, species, created}, i) => (
-        <Card index={i} created={dayjs(created)} key={id} name={name} status={status} species={species}/>
+      {cards?.map(({id, name, status, species, created, url}, i) => (
+        <Card index={i} created={dayjs(created)} key={id} name={name} status={status} species={species} url={url}/>
       ))}
     </div>
   );

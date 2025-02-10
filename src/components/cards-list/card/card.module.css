@@ -5,6 +5,14 @@
   padding: 20px 30px;
   text-align: center;
   box-shadow: 0 7px 25px 0 rgba(100, 100, 111, 0.2);
+  transition: transform 0.3s;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05);
 }
 
 .itemPrimary {

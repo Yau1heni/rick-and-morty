@@ -11,17 +11,18 @@ type CardProps = {
   status: CharacterStatus;
   species: string;
   created: Dayjs;
+  url: string
 }
 
 export const Card: FC<CardProps> = (props) => {
-  const {species, status, name, index, created} = props
+  const {species, status, name, index, created, url} = props
   const cardStyles = clsx(styles.card, styles[getStyleVariant(index, VariantPrefix.Item)])
   const titleStyles = clsx(styles[getStyleVariant(index, VariantPrefix.Title)])
   const textStatusStyles = clsx(styles.text, styles[status.toLowerCase()])
   const formattedDate = created.format(DateFormat.DOT_FORMAT);
 
   return (
-    <div className={cardStyles}>
+    <a href={url} target="_blank" rel="noopener noreferrer" aria-label={'character card'} className={cardStyles}>
       <h2 className={titleStyles}>{name} - {species}</h2>
       <div className={styles.cardFooter}>
         <div className={styles.statusContainer}>
@@ -31,6 +32,6 @@ export const Card: FC<CardProps> = (props) => {
         </div>
         <h3 className={clsx(styles.text, styles.textGray)}>Created: {formattedDate}</h3>
       </div>
-    </div>
+    </a>
   );
 };
