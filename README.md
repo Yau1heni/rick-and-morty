@@ -1,50 +1,24 @@
-# React + TypeScript + Vite
+# Rick and Morty
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Приложение для поиска персонажей из сериала Рик и Морти.
 
-Currently, two official plugins are available:
+## Установка и запуск проекта
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+| Основные команды | Описание                                          |
+|------------------|---------------------------------------------------|
+| `dev`            | `Запуск проекта в dev режиме`                     |
+| `build`          | `Сборка проекта`                                  |
+| `predeploy`      | `Выполняет сборку перед деплоем.`                 |
+| `deploy`         | `Запуск деплоя для Github Pages`                  |
+| `lint`           | `Запуск eslint`                                   |
+| `preview`        | `Предварительный просмотр собранного приложения.` |
 
-## Expanding the ESLint configuration
+## Зависимости
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **react**: Библиотека для создания пользовательских интерфейсов.
+- **axios**: Библиотека для выполнения HTTP-запросов.
+- **clsx**: Утилита для условного объединения классов.
+- **dayjs**: Библиотека для работы с датами и временем.
+- **gh-pages**: Библиотека для деплоя на GitHub Pages.
+- **react-spinners**: Библиотека для отображения индикаторов загрузки.
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
