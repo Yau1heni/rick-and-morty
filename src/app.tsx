@@ -9,7 +9,7 @@ const App = () => {
 
   return (
     <>
-      <SearchField quantity={data.length} value={searchValue} onChange={setSearchValue}/>
+      <SearchField key={searchValue} isLoading={isLoading} quantity={data.length} value={searchValue} onChange={setSearchValue}/>
       <CardsList cards={data} isLoading={isLoading}/>
     </>
   )

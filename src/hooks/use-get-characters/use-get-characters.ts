@@ -11,7 +11,9 @@ export const useGetCharacters = (searchValue: string) => {
   const debouncedValue = useDebounce(searchValue)
 
   const getCharacter = (searchValue: string) => {
-    if (searchValue.length >= 3) {
+    if (debouncedValue.length <= 3) {
+      setCharacters([])
+    } else {
       setIsLoading(true);
       characterApi.getCharacters(searchValue).then(characters => {
         setCharacters(characters);
