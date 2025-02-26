@@ -1,0 +1,1 @@
+export const REQUIRED_LENGTH_SEARCH_TERMS = 3

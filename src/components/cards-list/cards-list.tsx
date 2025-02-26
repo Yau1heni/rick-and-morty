@@ -4,21 +4,23 @@ import {Character} from "@/types";
 import {Card} from "./card/card.tsx";
 import dayjs from "dayjs";
 import {BeatLoader} from "react-spinners";
+import {EmptyCardList} from "./empty-card-list/empty-card-list.tsx";
 
 type CardsListProps = {
   cards?: Character[]
   isLoading: boolean;
+  isValidSearchTerms: boolean
 }
 
 export const CardsList: FC<CardsListProps> = (props) => {
-  const {cards, isLoading} = props
+  const {cards, isLoading, isValidSearchTerms} = props
 
   if (isLoading) {
     return <BeatLoader className={styles.loader}/>
   }
 
-  if (cards && cards.length === 0) {
-    return null
+  if (isValidSearchTerms && cards?.length === 0) {
+    return <EmptyCardList/>
   }
 
   return (
