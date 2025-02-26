@@ -18,12 +18,12 @@
 .itemPrimary {
   grid-column: span 3;
   grid-row: span 2;
-  height: 262px;
+  min-height: 262px;
 }
 
 .itemSecondary {
   grid-column: span 2;
-  height: 150px;
+  min-height: 150px;
 }
 
 .titlePrimary {
